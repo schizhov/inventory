@@ -1,1 +1,4 @@
-# inventory
+# Inventory
+
+# Build
+`gradle build`
