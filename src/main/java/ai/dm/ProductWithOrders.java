@@ -1,5 +1,7 @@
 package ai.dm;
 
 
-public class ProductWithOrders {
+import java.util.List;
+
+public record ProductWithOrders(Product product, List<Order> orders) {
 }

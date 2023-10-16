@@ -1,0 +1,26 @@
+services:
+  db:
+    hostname: db
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: is
+      POSTGRES_PASSWORD: bam
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/db
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  is:
+    hostname: is
+    image: inventory-service:latest
+    environment:
+      AIDM_IS_DB_USER: is
+      AIDM_IS_DB_PASSWORD: bam
+      AIDM_IS_JDBC_URL: jdbc:postgresql://db:5432/is
+    volumes:
+      - ./config.yaml:/config.yaml
+    ports:
+      - 8080:8080
+      - 8088:8088
+

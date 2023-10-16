@@ -18,7 +18,7 @@ database:
   driverClass: org.postgresql.Driver
   user: ${AIDM_IS_DB_USER} #inventory-service
   password: ${AIDM_IS_DB_PASSWORD}
-  url: ${AIDM_IS_JDBC_URL}
+  url: ${AIDM_IS_JDBC_URL} #jdbc:postgresql://db.example.com/db-prod
 
   properties:
     charSet: UTF-8
