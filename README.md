@@ -1,5 +1,7 @@
 # Inventory
 
+Rest endpoints return and accept json.
+
 ## Technology choices
 
 - [Dropwizard](dropwizard.io)
@@ -11,7 +13,7 @@
 
 `gradle clean jibDockerBuild test`
 
-We need docker image for the integration tests.
+We need docker image built before the integration tests.
 
 # Run locally
 
