@@ -5,6 +5,7 @@ Rest endpoints return and accept json.
 
 ## Technology choices
 
+- Java 17
 - [Dropwizard](dropwizard.io)
 - Postgres
 - [JDBI](jdbi.org)
